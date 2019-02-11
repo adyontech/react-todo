@@ -34,6 +34,7 @@ function BoardHeader(props) {
     function handleAdd(context, event) {
         event.preventDefault();
         context.AddListColumn(newListName)
+        setNewListName('')
         setToggleModal(false)
     }
 

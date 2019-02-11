@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import {BoardContextConsumer} from './boardContext'
 import {
     Typography,
     Grid,
@@ -11,8 +10,6 @@ import { Link } from 'react-router-dom';
 function AllBoards(props){
 const {id, name} = props.board
     return(
-    <BoardContextConsumer>
-     {(context) => (
         <Card style={{ border:"1px dashed green", minHeight:'198px'}}>
             <CardContent>
                 <Grid  container   direction="column" justify="center" alignItems="center">
@@ -29,8 +26,7 @@ const {id, name} = props.board
                 </Grid>
             </CardContent>
         </Card>  
-       )}
-     </BoardContextConsumer>
+      
     )
 }
 

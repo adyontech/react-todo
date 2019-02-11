@@ -24,18 +24,18 @@ function BoardMain (){
     return ( 
         <div> 
         <BoardProvider>
-                <React.Fragment>
-                        <Grid style={{ margin: '20px auto', padding: '20px 40px',}}  container   direction="row" justify="flex-start" alignItems="flex-start">
-                            <Grid item xs={3} style={{padding:'5px'}}> 
-                                <AddNewBoard/> 
-                            </Grid> 
-                            <BoardContextConsumer>
-                                {(context) => (
-                                      renderBoardItems(context)
-                                )}
-                            </BoardContextConsumer>
-                        </Grid>
-                </React.Fragment>
+            <React.Fragment>
+                <Grid style={{ margin: '20px auto', padding: '20px 40px',}}  container   direction="row" justify="flex-start" alignItems="flex-start">
+                    <Grid item xs={3} style={{padding:'5px'}}> 
+                        <AddNewBoard/> 
+                    </Grid> 
+                    <BoardContextConsumer>
+                        {(context) => (
+                                renderBoardItems(context)
+                        )}
+                    </BoardContextConsumer>
+                </Grid>
+            </React.Fragment>
         </BoardProvider>
         </div>
         );
